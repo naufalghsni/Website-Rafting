@@ -795,3 +795,10 @@ footer {
         font-size: 1.5rem;
     }
 }
+
+.about-section {
+    position: relative; 
+    padding: 60px 20px; 
+    text-align: center;
+}
+
