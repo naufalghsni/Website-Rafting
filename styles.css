@@ -430,150 +430,107 @@ nav ul li a:hover::after {
 }
 
 /* Packages Section */
+/* Packages Section */
 .packages {
-    padding: 80px 0;
+    text-align: center;
 }
 
 .packages-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    justify-items: center;
 }
-
-.package-card {
-    background-color: var(--white);
+  
+.package-card-vertical {
+    background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-    position: relative;
-}
-
-.package-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.package-card.popular {
-    border: 2px solid var(--primary-color);
-}
-
-.popular-tag {
-    position: absolute;
-    top: 20px;
-    right: -30px;
-    background-color: var(--accent-color);
-    color: var(--white);
-    padding: 5px 30px;
-    font-weight: 600;
-    transform: rotate(45deg);
-    font-size: 0.8rem;
-}
-
-.package-header {
-    padding: 30px;
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-}
-
-.package-header h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.price {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-.price span {
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-.package-body {
-    padding: 30px;
-}
-
-.package-body ul {
-    margin-bottom: 30px;
-}
-
-.package-body ul li {
-    margin-bottom: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     display: flex;
-    align-items: center;
-}
-
-.package-body ul li i {
-    margin-right: 10px;
-    color: var(--primary-color);
-}
-
-.package-btn {
+    flex-direction: column;
+    transition: transform 0.2s ease;
+    max-width: 350px;
     width: 100%;
-    text-align: center;
 }
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
+  
+.package-card-vertical:hover {
+    transform: translateY(-5px);
+}
+  
+.package-card-vertical .package-image {
+    position: relative;
+    height: 180px;
+}
+  
+.package-card-vertical .package-image img {
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    object-fit: cover;
 }
-
-.modal-content {
-    background-color: #fff;
-    margin: 5% auto;
-    padding: 25px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    animation: modalFadeIn 0.3s;
-}
-
-@keyframes modalFadeIn {
-    from {opacity: 0; transform: translateY(-20px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
-.close-modal {
-    float: right;
-    font-size: 24px;
-    cursor: pointer;
-    color: #888;
-}
-
-.close-modal:hover {
-    color: #333;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
+  
+.package-card-vertical .package-price {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 6px 10px;
+    font-weight: bold;
     border-radius: 4px;
+    font-size: 14px;
+}
+  
+.package-card-vertical .package-info {
+    padding: 15px;
+    text-align: center;
+}
+  
+.package-card-vertical .package-info h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+  
+.package-card-vertical .package-info p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.package-content {
+    display: flex;
+    justify-content: center;
+}
+
+.booking-button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.wa-button {
+    display: inline-block;
+    padding: 14px 22px;
+    background-color: #25D366;
+    color: white;
     font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.form-group textarea {
-    height: 100px;
-    resize: vertical;
+.wa-button:hover {
+    background-color: #1ebe5d;
 }
 
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+  
 /* Contact Section */
 .contact {
     padding: 80px 0;
