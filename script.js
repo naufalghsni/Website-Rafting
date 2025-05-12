@@ -74,4 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Run animation on load and scroll
     window.addEventListener('load', animateOnScroll);
     window.addEventListener('scroll', animateOnScroll);
+
+    // Footer Year
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
 });
